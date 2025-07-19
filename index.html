@@ -3,48 +3,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Click Bonus</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
-      background: linear-gradient(to bottom, #004e62, #009688);
+      padding: 0;
+      background: linear-gradient(to bottom, #005c5c, #00a388);
       font-family: Arial, sans-serif;
-      text-align: center;
       color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+
     .container {
-      padding-top: 100px;
+      text-align: center;
     }
-    .bonus-image {
-      width: 150px;
+
+    h1 {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+
+    .chest-img {
+      width: 200px;
       margin: 20px auto;
-      display: block;
     }
-    .btn-start {
-      background-color: #388e3c;
+
+    button {
+      background-color: #2e8b57;
       border: none;
-      color: white;
-      padding: 12px 30px;
+      padding: 10px 20px;
       font-size: 16px;
-      border-radius: 6px;
+      color: white;
+      border-radius: 5px;
       cursor: pointer;
-      margin-top: 15px;
     }
-    .btn-start:hover {
-      background-color: #2e7d32;
+
+    button:hover {
+      background-color: #246b45;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Tap to earn</h1>
-    <h2>Your Bonus</h2>
+    <p><strong>Your Bonus</strong></p>
     <p>You have 10 seconds</p>
-    <img src="Chest.png" alt="Treasure Chest" class="bonus-image">
-    <br>
-    <a href="https://ldl1.com/link?z=9584135&var=pushhousetest1&ymid={click_id}">
-      <button class="btn-start">START</button>
-    </a>
+    <img class="chest-img" src="Chest.png" alt="Treasure Chest">
+    <button onclick="window.location.href='https://ldl1.com/link?z=9584135&var=pushhousetest1&ymid={click_id}'">START</button>
   </div>
 </body>
 </html>
