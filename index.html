@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Click Bonus</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bonus Offer</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #025E5D, #11AD86);
+      background: linear-gradient(to bottom, #006666, #00b386);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .container {
+      color: white;
       text-align: center;
-    }
-
-    .title {
-      font-size: 28px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      margin-top: 10px;
-    }
-
-    .description {
-      font-size: 16px;
-      color: #ffffff;
-      margin-top: 5px;
-      margin-bottom: 20px;
+      flex-direction: column;
     }
 
     .chest {
       width: 200px;
-      height: auto;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
-    .start-button {
-      padding: 14px 28px;
-      background-color: #FFD700; /* ЗОЛОТОЙ цвет */
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
+    .btn {
+      background-color: #ffd700;
       border: none;
-      border-radius: 12px;
+      color: black;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.1s ease, background-color 0.2s ease;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
     }
 
-    .start-button:hover {
-      background-color: #FFC107;
+    .btn:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
     }
 
-    .start-button:active {
-      transform: scale(0.95);
+    .countdown {
+      font-size: 16px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">Tap to earn</div>
-    <div class="subtitle">Your Bonus</div>
-    <div class="description">You have 10 seconds</div>
-    <img src="сhest.png" alt="Treasure Chest" class="chest">
-    <br>
-    <a href="https://ldl1.com/link?z=9584135&var=pushhousetest1&ymid={click_id}">
-      <button class="start-button">START</button>
-    </a>
-  </div>
+
+  <h2>Tap to earn</h2>
+  <h4>Your Bonus</h4>
+  <p class="countdown">You have <span id="timer">10</span> seconds</p>
+
+  <img src="chest.png" alt="Treasure Chest" class="chest" />
+
+  <button class="btn" onclick="goToOffer()">START</button>
+
+  <script>
+    const redirectUrl = "https://nya5.com/link?z=9590883&var=pushhouse&ymid=auto"; // Заменить на нужную ссылку
+    let seconds = 10;
+    const timer = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      seconds--;
+      timer.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = redirectUrl;
+      }
+    }, 1000);
+
+    function goToOffer() {
+      window.location.href = redirectUrl;
+    }
+  </script>
+
 </body>
 </html>
