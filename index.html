@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Click Bonus</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #005c5c, #00a388);
+      height: 100%;
       font-family: Arial, sans-serif;
-      color: white;
+      background: linear-gradient(to bottom, #025E5D, #11AD86);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -23,38 +19,57 @@
       text-align: center;
     }
 
-    h1 {
-      font-size: 2em;
-      margin: 10px 0;
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
     }
 
-    .chest-img {
-      width: 200px;
-      margin: 20px auto;
+    .subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-top: 10px;
     }
 
-    button {
-      background-color: #2e8b57;
-      border: none;
-      padding: 10px 20px;
+    .description {
       font-size: 16px;
-      color: white;
+      color: #ffffff;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    .chest {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .start-button {
+      padding: 10px 25px;
+      background-color: #2e7d59;
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    button:hover {
-      background-color: #246b45;
+    .start-button:hover {
+      background-color: #256748;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Tap to earn</h1>
-    <p><strong>Your Bonus</strong></p>
-    <p>You have 10 seconds</p>
-    <img class="chest-img" src="Chest.png" alt="Treasure Chest">
-    <button onclick="window.location.href='https://ldl1.com/link?z=9584135&var=pushhousetest1&ymid={click_id}'">START</button>
+    <div class="title">Tap to earn</div>
+    <div class="subtitle">Your Bonus</div>
+    <div class="description">You have 10 seconds</div>
+    <img src="Сhest.png" alt="Treasure Chest" class="chest">
+    <br>
+    <a href="https://ldl1.com/link?z=9584135&var=pushhousetest1&ymid={click_id}">
+      <button class="start-button">START</button>
+    </a>
   </div>
 </body>
 </html>
