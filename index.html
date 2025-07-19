@@ -46,17 +46,24 @@
     }
 
     .start-button {
-      padding: 10px 25px;
-      background-color: #2e7d59;
-      color: #ffffff;
-      font-size: 16px;
+      padding: 14px 28px;
+      background-color: #FFD700; /* ЗОЛОТОЙ цвет */
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 12px;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.1s ease, background-color 0.2s ease;
     }
 
     .start-button:hover {
-      background-color: #256748;
+      background-color: #FFC107;
+    }
+
+    .start-button:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
